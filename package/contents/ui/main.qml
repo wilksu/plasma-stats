@@ -593,14 +593,17 @@ PlasmoidItem {
             var netIn = colNetIn >= 0 ? (Number(nativeProcessModel.data(nativeProcessModel.index(r, colNetIn), Process.ProcessDataModel.Value)) || 0) : 0
             var netOut = colNetOut >= 0 ? (Number(nativeProcessModel.data(nativeProcessModel.index(r, colNetOut), Process.ProcessDataModel.Value)) || 0) : 0
 
+            var memBytes = memVal * 1024 // ProcessDataModel memory attribute is in KiB
+            var memPct = (memBytes / totalRam) * 100
+
             all.push({
                 pid: String(pid),
                 name: String(pname),
                 cpuNum: cpuVal,
                 cpu: cpuVal.toFixed(1),
-                memBytes: memVal,
-                memNum: (memVal / totalRam) * 100,
-                mem: ((memVal / totalRam) * 100).toFixed(1),
+                memBytes: memBytes,
+                memNum: memPct,
+                mem: memPct.toFixed(1),
                 netDown: Math.max(0, netIn),
                 netUp: Math.max(0, netOut),
                 netTotal: Math.max(0, netIn) + Math.max(0, netOut)
