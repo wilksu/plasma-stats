@@ -4,6 +4,18 @@
 
 ---
 
+## 界面预览
+
+### 顶栏常驻监控条
+![顶栏监控条](docs/screenshots/panel.png)
+
+### 详情弹窗与设置界面
+| CPU 详情仪表盘 | 网络详情与活跃进程 | 中文设置界面 |
+| :---: | :---: | :---: |
+| ![CPU 详情](docs/screenshots/cpu.png) | ![网络详情](docs/screenshots/network.png) | ![网络设置](docs/screenshots/settings.png) |
+
+---
+
 ## 一、功能特性
 
 ### 1. 四大核心监控模块
