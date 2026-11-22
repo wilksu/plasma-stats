@@ -158,6 +158,7 @@ PlasmoidItem {
 
     function sensorNum(sensor, fallback) {
         if (!sensor || sensor.status !== Sensors.Sensor.Ready) return fallback
+        if (sensor.value === undefined || sensor.value === null || sensor.value === "") return fallback
         var v = Number(sensor.value)
         return isNaN(v) ? fallback : v
     }
@@ -409,8 +410,11 @@ PlasmoidItem {
     readonly property real ramBufferBytes: Math.max(0, sensorNum(ramBufferSensor, 0))
     readonly property real ramPercent: {
         var p = sensorNum(ramPercentSensor, -1)
-        if (p >= 0) return Math.min(100, p)
-        return ramTotalBytes > 0 ? Math.min(100, (ramUsedBytes / ramTotalBytes) * 100) : 0
+        if (p > 0) return Math.min(100, p)
+        if (ramTotalBytes > 0 && ramUsedBytes > 0) {
+            return Math.min(100, (ramUsedBytes / ramTotalBytes) * 100)
+        }
+        return p >= 0 ? Math.min(100, p) : 0
     }
     readonly property real swapTotalBytes: Math.max(0, sensorNum(swapTotalSensor, 0))
     readonly property real swapUsedBytes: Math.max(0, sensorNum(swapUsedSensor, 0))
