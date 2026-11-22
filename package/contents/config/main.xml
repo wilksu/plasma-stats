@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+    <kcfgfile name=""/>
+
+    <group name="General">
+        <entry name="language" type="String">
+            <default>auto</default>
+        </entry>
+        <entry name="moduleOrder" type="String">
+            <default>cpu,gpu,ram,network</default>
+        </entry>
+        <entry name="refreshIntervalMs" type="Int">
+            <default>1000</default>
+        </entry>
+        <entry name="colorSchemeMode" type="String">
+            <default>accent</default>
+        </entry>
+        <entry name="temperatureUnit" type="String">
+            <default>C</default>
+        </entry>
+        <entry name="panelDensity" type="String">
+            <default>normal</default>
+        </entry>
+        <entry name="showModuleLabels" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="useMonospaceNumbers" type="Bool">
+            <default>true</default>
+        </entry>
+    </group>
+
+    <group name="CPU">
+        <entry name="cpuEnabled" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="cpuPanelStyle" type="String">
+            <default>barchart</default>
+        </entry>
+        <entry name="cpuMultiCore" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="cpuShowTemperature" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="cpuShowFrequency" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="cpuTopProcesses" type="Int">
+            <default>5</default>
+        </entry>
+        <entry name="cpuShowCoreMatrix" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="cpuShowSystemInfo" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="cpuCustomColor" type="String">
+            <default>#3daee9</default>
+        </entry>
+    </group>
+
+    <group name="GPU">
+        <entry name="gpuEnabled" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="gpuTarget" type="String">
+            <default>auto</default>
+        </entry>
+        <entry name="gpuPanelStyle" type="String">
+            <default>linechart</default>
+        </entry>
+        <entry name="gpuShowVram" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="gpuShowTemperature" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="gpuCustomColor" type="String">
+            <default>#2ecc71</default>
+        </entry>
+    </group>
+
+    <group name="RAM">
+        <entry name="ramEnabled" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="ramPanelStyle" type="String">
+            <default>pie</default>
+        </entry>
+        <entry name="ramDisplayFormat" type="String">
+            <default>percent</default>
+        </entry>
+        <entry name="ramShowSwap" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="ramShowTopProcesses" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="ramCustomColor" type="String">
+            <default>#9b59b6</default>
+        </entry>
+    </group>
+
+    <group name="Network">
+        <entry name="networkEnabled" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="networkInterface" type="String">
+            <default>all</default>
+        </entry>
+        <entry name="networkPanelStyle" type="String">
+            <default>speed</default>
+        </entry>
+        <entry name="networkUnit" type="String">
+            <default>bytes</default>
+        </entry>
+        <entry name="networkHideNoise" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="networkShowTopProcesses" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="networkShowConnectionInfo" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="networkDownloadColor" type="String">
+            <default>#3498db</default>
+        </entry>
+        <entry name="networkUploadColor" type="String">
+            <default>#e74c3c</default>
+        </entry>
+    </group>
+</kcfg>

@@ -1,0 +1,26 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Plasma Stats Contributors"
+            }
+        ],
+        "Category": "System Information",
+        "Description": "A macOS Stats-inspired modular system monitor widget for KDE Plasma 6 (CPU, GPU, RAM, Network)",
+        "Description[zh_CN]": "对标 macOS Stats 的 KDE Plasma 6 模块化系统监控微件（CPU、GPU、内存、网络）",
+        "Icon": "utilities-system-monitor",
+        "Id": "org.local.plasmastats",
+        "License": "GPL-3.0-or-later",
+        "Name": "Plasma Stats",
+        "Name[zh_CN]": "Plasma Stats 系统监控",
+        "Version": "1.0.0",
+        "Website": "https://github.com/local/plasma-stats"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-NotificationArea": "true",
+    "X-Plasma-NotificationAreaCategory": "Hardware",
+    "X-Plasma-Provides": [
+        "org.kde.plasma.systemmonitor"
+    ]
+}
